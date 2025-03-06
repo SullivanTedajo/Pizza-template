@@ -1,0 +1,48 @@
+@forward '../global';
+@forward '../util';
+
+.contact{
+    background-color: var(--contact-color);
+    @extend %typography-section;
+
+    &__wrapper{
+        @extend %wrapper;
+    }
+
+    &__title{
+        @extend %primary-title;
+    }
+
+    &__description{
+        margin-top: 1.5em;
+        &:nth-of-type(3) {
+            font: {
+                size: 1.6em;
+            }
+        }
+    }
+
+    &__form{
+        margin-top: 2em;
+    }
+
+    &__submit{
+        @extend .contact__form-control;
+        text: {
+           align: center;
+           transform: uppercase;
+
+        }
+        cursor: pointer;
+
+    }
+
+    &__message{
+        resize: none;
+    }
+
+    &__date{
+        font-size: .85em;
+        color: var(--contact-color);
+    }
+}

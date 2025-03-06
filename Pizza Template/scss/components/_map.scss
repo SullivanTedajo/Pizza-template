@@ -1,0 +1,10 @@
+@forward '../global';
+@forward '../util';
+
+.map{
+
+    &__feature{
+        width: 100%;
+        height: 120vh;
+    }
+}

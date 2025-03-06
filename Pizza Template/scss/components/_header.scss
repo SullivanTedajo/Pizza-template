@@ -1,0 +1,55 @@
+@forward '../global';
+
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: var(--transparent-background);
+    color: var(--text-color);
+    margin: 0;
+    margin-bottom: 67vh;
+    padding: 0;
+
+    &:hover{
+        background-color: var(--background-header);
+    }
+
+    &__items{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item{
+
+        &:hover{
+            background-color: var(--gray-color);
+        }
+    }
+
+
+    &__link{
+        display: inline-block;
+        padding: .7em .8em;
+        text: {
+            decoration: none;
+            transform: uppercase;
+        }
+
+        font: {
+            size: 1.1em;
+            weight: 300;
+        }
+        color: var(--text-color);
+
+
+        &:hover{
+            color: var(--background-header);
+        }
+
+    }
+
+}

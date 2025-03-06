@@ -1,0 +1,83 @@
+@forward '../global';
+@forward '../util';
+
+
+.about{
+    background-color: var(--about-color);
+    @extend %typography-section;
+    
+
+    &__wrapper{
+        @extend %wrapper;
+    }
+
+    &__title{
+        @extend %primary-title;
+
+    }
+
+    &__description{
+        text: {
+            align: justify;
+        }
+        font: {
+            weight: 200;
+            size: 1em;
+        }
+        margin-bottom: 2em;
+    }
+
+    &__team{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3em;
+    }
+
+    &__presentation{
+        &::first-line{
+            margin-bottom: 2em;
+        }
+        align-content: baseline;
+    }
+
+    &__br{
+        height: 3em;
+        margin: 4em;
+        padding: 4em;
+        line-height: 200%;
+    }
+
+    &__profil{
+        border-radius: 50%;
+        width: 55;
+        height: 55;
+    }
+
+    &__image{
+        width: 100%;
+        height: 30em;
+        object-fit: cover;
+        margin-bottom: 4em;
+        
+    }
+
+    &__secondary-title{
+        font-size: 1.8em;
+    }
+
+    &__planing{
+        display: flex;
+        gap: 28%;
+    }
+
+    &__days{
+        display: block;
+        gap: 4em;
+    }
+
+    &__day{
+        display: block;
+        margin-top: 2em;
+        font-weight: 200;
+    }
+}

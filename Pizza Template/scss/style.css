@@ -1,0 +1,343 @@
+/* --- ******  PARAMETRAGE DES ELEMENTS GLOBAUX DU SITE  ****** --- */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0.4rem;
+}
+
+html {
+  margin: 0;
+  font-size: 14px;
+  height: 100%;
+  font-family: "Amatic SC", sans-serif;
+}
+
+button, input, textarea {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 1.2rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1.8em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --background-header: #000000;
+  --transparent-background: #00000050;
+  --text-color:#FFF;
+  --gray-color: #CCCCCC;
+  --primary-color: #F44336;
+  --price-color: #616161;
+  --product-color: #616161a0;
+  --product-meta: #61616190;
+  --about-color: #8B5F5B;
+  --contact-color: #6C7A81;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: var(--transparent-background);
+  color: var(--text-color);
+  margin: 0;
+  margin-bottom: 67vh;
+  padding: 0;
+}
+.header:hover {
+  background-color: var(--background-header);
+}
+.header__items {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.header__item:hover {
+  background-color: var(--gray-color);
+}
+.header__link {
+  display: inline-block;
+  padding: 0.7em 0.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 300;
+  color: var(--text-color);
+}
+.header__link:hover {
+  color: var(--background-header);
+}
+
+.hero__button, .hero__timing {
+  text-transform: uppercase;
+  color: var(--text-color);
+  padding: 0.3em;
+  background-color: var(--background-header);
+  border: none;
+  line-height: 2em;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+.hero__button:hover, .hero__timing:hover {
+  background-color: var(--gray-color);
+  color: var(--background-header);
+  cursor: pointer;
+}
+
+.contact__title, .about__title, .menu__title, .hero__title {
+  font-size: 3.2em;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2.2;
+}
+
+.menu__new, .menu__hot {
+  background-color: var(--product-meta);
+  color: var(--background-header);
+  border-radius: 0.15em;
+  padding: 0.3em;
+  font-weight: 200;
+}
+
+.contact__wrapper, .about__wrapper, .menu__wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
+
+.contact, .about, .menu {
+  color: var(--text-color);
+  padding: 4em 0.8em;
+  text-transform: uppercase;
+}
+
+.contact__form-control, .contact__submit {
+  display: block;
+  padding: 1.8em 0.6em;
+  width: 100%;
+  margin-bottom: 1.3em;
+}
+.contact__form-control::-moz-placeholder, .contact__submit::-moz-placeholder {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.contact__form-control::placeholder, .contact__submit::placeholder {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.hero {
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  background: center/cover url("../img/pizza-hero.jpg") no-repeat;
+  background-color: rgba(0, 0, 0, 0.45);
+  background-blend-mode: soft-light;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0 0 0;
+}
+.hero__button {
+  padding: 0.5em;
+}
+.hero__timing {
+  position: absolute;
+  left: 0.8em;
+  bottom: 2em;
+  font-size: 0.9em;
+}
+
+.menu {
+  position: relative;
+  background-color: var(--background-header);
+}
+.menu__nav {
+  border: 1px solid rgba(255, 255, 255, 0.4392156863);
+  padding: 0;
+  margin: 0;
+}
+.menu__items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  gap: 0;
+}
+.menu__item {
+  cursor: pointer;
+  padding: 1.8em;
+}
+.menu__item:first-child {
+  background-color: var(--primary-color);
+}
+.menu__item:hover {
+  background-color: var(--primary-color);
+}
+.menu__link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.7em;
+  font-weight: 200;
+}
+.menu__container {
+  background-color: var(--text-color);
+  color: var(--background-header);
+}
+.menu__pizza-type {
+  padding: 2em 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__name {
+  font-weight: 600;
+  font-size: 1.6em;
+}
+.menu__price {
+  font-size: 1.6em;
+  background-color: var(--price-color);
+  color: var(--text-color);
+  border-radius: 0.15em;
+  padding: 0.3em;
+}
+.menu__price::before {
+  content: "$";
+}
+.menu__constitution {
+  padding: 0.8em;
+  font-size: 1.4em;
+  color: var(--product-color);
+}
+.menu__hot {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.menu__hr {
+  width: 95%;
+  margin-top: 2em;
+}
+
+.about {
+  background-color: var(--about-color);
+}
+.about__description {
+  text-align: justify;
+  font-weight: 200;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+.about__team {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+.about__presentation {
+  align-content: baseline;
+}
+.about__presentation::first-line {
+  margin-bottom: 2em;
+}
+.about__br {
+  height: 3em;
+  margin: 4em;
+  padding: 4em;
+  line-height: 200%;
+}
+.about__profil {
+  border-radius: 50%;
+  width: 55;
+  height: 55;
+}
+.about__image {
+  width: 100%;
+  height: 30em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 4em;
+}
+.about__secondary-title {
+  font-size: 1.8em;
+}
+.about__planing {
+  display: flex;
+  gap: 28%;
+}
+.about__days {
+  display: block;
+  gap: 4em;
+}
+.about__day {
+  display: block;
+  margin-top: 2em;
+  font-weight: 200;
+}
+
+.map__feature {
+  width: 100%;
+  height: 120vh;
+}
+
+.contact {
+  background-color: var(--contact-color);
+}
+.contact__description {
+  margin-top: 1.5em;
+}
+.contact__description:nth-of-type(3) {
+  font-size: 1.6em;
+}
+.contact__form {
+  margin-top: 2em;
+}
+.contact__submit {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.contact__message {
+  resize: none;
+}
+.contact__date {
+  font-size: 0.85em;
+  color: var(--contact-color);
+}
+
+.footer {
+  background-color: var(--background-header);
+  padding-block: 3.5em;
+  color: var(--text-color);
+  font-size: 1.5em;
+}
+.footer__text {
+  text-align: center;
+  text-transform: uppercase;
+}
+.footer__link {
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: inherit;
+}/*# sourceMappingURL=style.css.map */

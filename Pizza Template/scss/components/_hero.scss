@@ -1,0 +1,40 @@
+@forward '../global';
+@forward '../util';
+
+.hero{
+    // background:  center / cover  url("../../img/pizza-hero.jpg") no-repeat;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    background:  center / cover  url("../img/pizza-hero.jpg") no-repeat;
+    background-color: rgba(0, 0, 0, 0.45);
+    background-blend-mode: soft-light;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0 0 0;
+
+
+    
+    &__title{
+        @extend %primary-title;
+    }
+
+    &__button{
+       @extend %important-text;
+       padding: .5em;
+    }
+
+    &__timing{
+        position: absolute;
+        left: .8em;
+        bottom: 2em;
+       @extend %important-text;
+       font-size: .9em;
+
+    }
+
+}
